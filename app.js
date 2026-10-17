@@ -11,9 +11,9 @@ const media=matchMedia('(prefers-color-scheme: dark)');
 function theme(){
   let dark=mode==='dark'||mode==='system'&&media.matches;
   let h=BLUE_HUE;
-  let vals=dark?{'bg':`hsl(${h} 13% 7%)`,'on':`hsl(${h} 15% 91%)`,'surface':`hsl(${h} 12% 12%)`,'surface-high':`hsl(${h} 12% 18%)`,'primary':`hsl(${h} 38% 76%)`,'on-primary':`hsl(${h} 44% 18%)`,'primary-container':`hsl(${h} 30% 28%)`,'on-primary-container':`hsl(${h} 43% 90%)`,'secondary-container':`hsl(${h} 16% 26%)`,'on-secondary-container':`hsl(${h} 25% 88%)`,'tertiary':`hsl(${(h+60)%360} 38% 77%)`,'on-tertiary':`hsl(${(h+60)%360} 35% 18%)`,'tertiary-container':`hsl(${(h+60)%360} 24% 28%)`,'on-tertiary-container':`hsl(${(h+60)%360} 40% 90%)`,'muted':`hsl(${h} 9% 70%)`,'outline':`hsl(${h} 10% 27%)`}:{'bg':`hsl(${h} 24% 97%)`,'on':`hsl(${h} 21% 13%)`,'surface':`hsl(${h} 24% 93%)`,'surface-high':`hsl(${h} 20% 89%)`,'primary':`hsl(${h} 38% 34%)`,'on-primary':'#fff','primary-container':`hsl(${h} 43% 84%)`,'on-primary-container':`hsl(${h} 44% 18%)`,'secondary-container':`hsl(${h} 22% 86%)`,'on-secondary-container':`hsl(${h} 25% 22%)`,'tertiary':`hsl(${(h+60)%360} 34% 35%)`,'on-tertiary':'#fff','tertiary-container':`hsl(${(h+60)%360} 43% 87%)`,'on-tertiary-container':`hsl(${(h+60)%360} 33% 20%)`,'muted':`hsl(${h} 9% 38%)`,'outline':`hsl(${h} 13% 80%)`};
+  let vals=dark?{'bg':`hsl(${h} 13% 7%)`,'on':`hsl(${h} 15% 91%)`,'surface':`hsl(${h} 12% 12% / .6)`,'surface-high':`hsl(${h} 12% 18% / .72)`,'primary':`hsl(${h} 38% 76%)`,'on-primary':`hsl(${h} 44% 18%)`,'primary-container':`hsl(${h} 30% 28% / .75)`,'on-primary-container':`hsl(${h} 43% 90%)`,'secondary-container':`hsl(${h} 16% 26% / .7)`,'on-secondary-container':`hsl(${h} 25% 88%)`,'tertiary':`hsl(${(h+60)%360} 38% 77%)`,'on-tertiary':`hsl(${(h+60)%360} 35% 18%)`,'tertiary-container':`hsl(${(h+60)%360} 24% 28% / .75)`,'on-tertiary-container':`hsl(${(h+60)%360} 40% 90%)`,'muted':`hsl(${h} 9% 70%)`,'outline':`hsl(${h} 10% 27% / .8)`,'scrim':'rgba(6,8,12,.62)'}:{'bg':`hsl(${h} 24% 97%)`,'on':`hsl(${h} 21% 13%)`,'surface':`hsl(${h} 24% 93% / .64)`,'surface-high':`hsl(${h} 20% 89% / .76)`,'primary':`hsl(${h} 38% 34%)`,'on-primary':'#fff','primary-container':`hsl(${h} 43% 84% / .8)`,'on-primary-container':`hsl(${h} 44% 18%)`,'secondary-container':`hsl(${h} 22% 86% / .76)`,'on-secondary-container':`hsl(${h} 25% 22%)`,'tertiary':`hsl(${(h+60)%360} 34% 35%)`,'on-tertiary':'#fff','tertiary-container':`hsl(${(h+60)%360} 43% 87% / .8)`,'on-tertiary-container':`hsl(${(h+60)%360} 33% 20%)`,'muted':`hsl(${h} 9% 38%)`,'outline':`hsl(${h} 13% 80% / .8)`,'scrim':'rgba(255,255,255,.5)'};
   Object.entries(vals).forEach(([k,v])=>document.documentElement.style.setProperty('--'+k,v));
-  document.querySelector('meta[name="theme-color"]').content=vals.bg;
+  document.querySelector('meta[name="theme-color"]').content=dark?'#0d0f15':'#f3f5fb';
   document.documentElement.style.colorScheme=dark?'dark':'light';
 }
 function updateDropdownDisplays(){
@@ -111,3 +111,24 @@ theme();
 translate();
 active();
 if(window.lucide)lucide.createIcons();
+const audio=document.getElementById('track-audio'),playerToggle=document.getElementById('player-toggle'),playerBar=document.getElementById('player-bar'),playerProgress=document.getElementById('player-progress');
+if(audio&&playerToggle){
+  function setIcon(name){
+    playerToggle.innerHTML=`<i data-lucide="${name}"></i>`;
+    if(window.lucide)lucide.createIcons({nodes:[playerToggle.firstElementChild]});
+  }
+  playerToggle.addEventListener('click',()=>{
+    if(audio.paused){audio.play().catch(()=>{});}
+    else{audio.pause();}
+  });
+  audio.addEventListener('play',()=>{setIcon('pause');playerToggle.setAttribute('aria-label','Pause music')});
+  audio.addEventListener('pause',()=>{setIcon('play');playerToggle.setAttribute('aria-label','Play music')});
+  audio.addEventListener('timeupdate',()=>{
+    if(audio.duration)playerProgress.style.width=(audio.currentTime/audio.duration*100)+'%';
+  });
+  playerBar.addEventListener('click',e=>{
+    const rect=playerBar.getBoundingClientRect();
+    const ratio=(e.clientX-rect.left)/rect.width;
+    if(audio.duration)audio.currentTime=ratio*audio.duration;
+  });
+}
