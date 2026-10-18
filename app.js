@@ -1,19 +1,19 @@
-const translations={en:{home:'Home',about:'About',projects:'Projects',contact:'Contact',sideNote:'A little corner of the internet.',topLabel:'PERSONAL SPACE / 001',preferences:'Preferences',language:'Language',appearance:'Appearance',system:'System',light:'Light',dark:'Dark',helloLabel:'WELCOME TO MY SPACE',heroTitle:'Hey, I’m <em>cobraS0FT.</em>',heroText:'I build exteraGram plugins, experiment with web technologies and turn ideas into useful little projects.',tag1:'Developer',tag2:'Plugins',tag3:'Warhammer 40K',explore:'Explore projects',moreAbout:'About me',channelDesc:'My Telegram channel for plugins and experiments.',githubDesc:'Source code and repositories',contactDesc:'Let’s get in touch',aboutHeading:'A little about me',aboutCardTitle:'Curiosity into projects.',aboutBody:'I’m cobraS0FT. I enjoy building practical tools, exploring APIs, working on exteraGram plugins and learning new things along the way. Outside of code, I’m into Warhammer 40,000 — Ultramarines are my favorite Chapter. This site is a home for my work and ways to reach me.',focusTitle:'What I focus on',focus1:'Telegram & exteraGram',focus2:'Web experiments',focus3:'Useful tools',focus4:'Warhammer 40K — Ultramarines',projectsHeading:'Things I’ve been making',projectsIntro:'A selection of projects and experiments.',airDesc:'Air raid alert notifications for Ukraine with region and district selection.',hubDesc:'This very website: a multilingual personal space.',seeChannel:'See channel',sourceCode:'Source code',plugin1Title:'BotTags',plugin1Desc:'Adds a tag to messages in selected chats. Configured with the .tag command. Useful for support bots.',plugin2Title:'AutoReplier By Excess',plugin2Desc:'Auto-replies in DMs if the owner hasn\u2019t responded within a set time.',plugin3Title:'NoDisturb',plugin3Desc:'Hides the profile, messages and online status of selected users.',contactHeading:'Have something in mind?',contactIntro:'Questions, ideas or collaboration — feel free to reach out.',workEmail:'Work email',copy:'Copy',copied:'Copied!',channel:'Channel',footer:'Made with curiosity.',backTop:'Back to top'},ru:{home:'Главная',about:'Обо мне',projects:'Проекты',contact:'Контакты',sideNote:'Маленький уголок интернета.',topLabel:'ЛИЧНОЕ ПРОСТРАНСТВО / 001',preferences:'Настройки',language:'Язык',appearance:'Оформление',system:'Системная',light:'Светлая',dark:'Тёмная',helloLabel:'ДОБРО ПОЖАЛОВАТЬ',heroTitle:'Привет, я <em>cobraS0FT.</em>',heroText:'Создаю плагины для exteraGram, экспериментирую с веб-технологиями и превращаю идеи в полезные проекты.',tag1:'Разработчик',tag2:'Плагины',tag3:'Warhammer 40K',explore:'Мои проекты',moreAbout:'Обо мне',channelDesc:'Мой Telegram-канал с плагинами и экспериментами.',githubDesc:'Исходники и репозитории',contactDesc:'Давай свяжемся',aboutHeading:'Немного обо мне',aboutCardTitle:'От любопытства к проектам.',aboutBody:'Я cobraS0FT. Мне нравится создавать полезные инструменты, изучать API, работать над плагинами для exteraGram и узнавать новое. Помимо кода увлекаюсь Warhammer 40,000 — любимый орден — Ультрамарины. Здесь собраны мои проекты и способы связи со мной.',focusTitle:'Мои направления',focus1:'Telegram и exteraGram',focus2:'Веб-эксперименты',focus3:'Полезные инструменты',focus4:'Warhammer 40K — Ультрамарины',projectsHeading:'Над чем я работаю',projectsIntro:'Подборка проектов и экспериментов.',airDesc:'Уведомления о воздушных тревогах в Украине с выбором области и района.',hubDesc:'Этот сайт: мультиязычное личное пространство.',seeChannel:'Перейти в канал',sourceCode:'Исходный код',plugin1Title:'BotTags',plugin1Desc:'Добавляет тег к сообщениям в выбранных чатах. Настройка командой .tag. Полезно в ботах поддержки.',plugin2Title:'AutoReplier By Excess',plugin2Desc:'Автоответ в личку, если владелец не ответил за указанное время.',plugin3Title:'NoDisturb',plugin3Desc:'Скрывает профили, сообщения и онлайн-статус выбранных пользователей.',contactHeading:'Есть идеи?',contactIntro:'Вопросы, предложения или сотрудничество — пиши.',workEmail:'Рабочая почта',copy:'Копировать',copied:'Скопировано!',channel:'Канал',footer:'Сделано с любопытством.',backTop:'Наверх'},uk:{home:'Головна',about:'Про мене',projects:'Проєкти',contact:'Контакти',sideNote:'Маленький куточок інтернету.',topLabel:'ОСОБИСТИЙ ПРОСТІР / 001',preferences:'Налаштування',language:'Мова',appearance:'Оформлення',system:'Системна',light:'Світла',dark:'Темна',helloLabel:'ЛАСКАВО ПРОШУ',heroTitle:'Привіт, я <em>cobraS0FT.</em>',heroText:'Створюю плагіни для exteraGram, експериментую з вебтехнологіями та перетворюю ідеї на корисні проєкти.',tag1:'Розробник',tag2:'Плагіни',tag3:'Warhammer 40K',explore:'Мої проєкти',moreAbout:'Про мене',channelDesc:'Мій Telegram-канал із плагінами та експериментами.',githubDesc:'Вихідний код і репозиторії',contactDesc:'Зв’яжімося',aboutHeading:'Трохи про мене',aboutCardTitle:'Від цікавості до проєктів.',aboutBody:'Я cobraS0FT. Люблю створювати корисні інструменти, досліджувати API, працювати над плагінами для exteraGram і вчитися нового. Окрім коду захоплююся Warhammer 40,000 — улюблений орден — Ультрамарини. Тут зібрані мої роботи та способи зв’язку зі мною.',focusTitle:'Мої напрями',focus1:'Telegram та exteraGram',focus2:'Вебексперименти',focus3:'Корисні інструменти',focus4:'Warhammer 40K — Ультрамарини',projectsHeading:'Над чим я працюю',projectsIntro:'Добірка проєктів та експериментів.',airDesc:'Сповіщення про повітряні тривоги в Україні з вибором області та району.',hubDesc:'Цей сайт: багатомовний особистий простір.',seeChannel:'Перейти до каналу',sourceCode:'Вихідний код',plugin1Title:'BotTags',plugin1Desc:'Додає тег до повідомлень у вибраних чатах. Налаштування командою .tag. Корисно в ботах підтримки.',plugin2Title:'AutoReplier By Excess',plugin2Desc:'Автовідповідь у приватні повідомлення, якщо власник не відповів за вказаний час.',plugin3Title:'NoDisturb',plugin3Desc:'Приховує профілі, повідомлення та онлайн-статус вибраних користувачів.',contactHeading:'Є ідеї?',contactIntro:'Запитання, пропозиції чи співпраця — пиши.',workEmail:'Робоча пошта',copy:'Копіювати',copied:'Скопійовано!',channel:'Канал',footer:'Створено з цікавістю.',backTop:'Нагору'}};
+const translations={en:{home:'Home',about:'About',projects:'Projects',contact:'Contact',sideNote:'A little corner of the internet.',topLabel:'PERSONAL SPACE / 001',preferences:'Preferences',language:'Language',appearance:'Appearance',light:'Light',dark:'Dark',helloLabel:'WELCOME TO MY SPACE',heroTitle:'Hey, I’m <em>cobraS0FT.</em>',heroText:'I build exteraGram plugins, experiment with web technologies and turn ideas into useful little projects.',tag1:'Developer',tag2:'Plugins',tag3:'Warhammer 40K',explore:'Explore projects',moreAbout:'About me',channelDesc:'My Telegram channel for plugins and experiments.',githubDesc:'Source code and repositories',contactDesc:'Let’s get in touch',aboutHeading:'A little about me',aboutCardTitle:'Curiosity into projects.',aboutBody:'I’m cobraS0FT. I enjoy building practical tools, exploring APIs, working on exteraGram plugins and learning new things along the way. Outside of code, I’m into Warhammer 40,000 — Ultramarines are my favorite Chapter. This site is a home for my work and ways to reach me.',focusTitle:'What I focus on',focus1:'Telegram & exteraGram',focus2:'Web experiments',focus3:'Useful tools',focus4:'Warhammer 40K — Ultramarines',projectsHeading:'Things I’ve been making',projectsIntro:'A selection of projects and experiments.',airDesc:'Air raid alert notifications for Ukraine with region and district selection.',hubDesc:'This very website: a multilingual personal space.',seeChannel:'See channel',sourceCode:'Source code',plugin1Title:'BotTags',plugin1Desc:'Adds a tag to messages in selected chats. Configured with the .tag command. Useful for support bots.',plugin2Title:'AutoReplier By Excess',plugin2Desc:'Auto-replies in DMs if the owner hasn\'t responded within a set time.',plugin3Title:'NoDisturb',plugin3Desc:'Hides the profile, messages and online status of selected users.',contactHeading:'Have something in mind?',contactIntro:'Questions, ideas or collaboration — feel free to reach out.',workEmail:'Work email',copy:'Copy',copied:'Copied!',channel:'Channel',footer:'Made with curiosity.',backTop:'Back to top',pageTitle:'cobraS0FT · Personal Hub',playMusic:'Play music',pauseMusic:'Pause music',settingsLabel:'Appearance and language settings',mainNav:'Main navigation',mobileNav:'Mobile navigation',quickLinks:'Quick links',sendEmail:'Send email',openSource:'Open Source',seekLabel:'Seek track'},ru:{home:'Главная',about:'Обо мне',projects:'Проекты',contact:'Контакты',sideNote:'Маленький уголок интернета.',topLabel:'ЛИЧНОЕ ПРОСТРАНСТВО / 001',preferences:'Настройки',language:'Язык',appearance:'Оформление',light:'Светлая',dark:'Тёмная',helloLabel:'ДОБРО ПОЖАЛОВАТЬ',heroTitle:'Привет, я <em>cobraS0FT.</em>',heroText:'Создаю плагины для exteraGram, экспериментирую с веб-технологиями и превращаю идеи в полезные проекты.',tag1:'Разработчик',tag2:'Плагины',tag3:'Warhammer 40K',explore:'Мои проекты',moreAbout:'Обо мне',channelDesc:'Мой Telegram-канал с плагинами и экспериментами.',githubDesc:'Исходники и репозитории',contactDesc:'Давай свяжемся',aboutHeading:'Немного обо мне',aboutCardTitle:'От любопытства к проектам.',aboutBody:'Я cobraS0FT. Мне нравится создавать полезные инструменты, изучать API, работать над плагинами для exteraGram и узнавать новое. Помимо кода увлекаюсь Warhammer 40,000 — любимый орде�� — Ультрамарины. Здесь собраны мои проекты и способы связи со мной.',focusTitle:'Мои направления',focus1:'Telegram и exteraGram',focus2:'Веб-эксперименты',focus3:'Полезные инструменты',focus4:'Warhammer 40K — Ультрамарины',projectsHeading:'Над чем я работаю',projectsIntro:'Подборка проектов и экспериментов.',airDesc:'Уведомления о воздушных тревогах в Украине с выбором области и района.',hubDesc:'Этот сайт: мультиязычное личное пространство.',seeChannel:'Перейти в канал',sourceCode:'Исходный код',plugin1Title:'BotTags',plugin1Desc:'Добавляет тег к сообщениям в выбранных чатах. Настройка командой .tag. Полезно в ботах поддержки.',plugin2Title:'AutoReplier By Excess',plugin2Desc:'Автоответ в личку, если владелец не ответил за указанное время.',plugin3Title:'NoDisturb',plugin3Desc:'Скрывает профили, сообщения и онлайн-статус выбранных пользователей.',contactHeading:'Есть идеи?',contactIntro:'Вопросы, предложения или сотрудничество — пиши.',workEmail:'Рабочая почта',copy:'Копировать',copied:'Скопировано!',channel:'Канал',footer:'Сделано с любопытством.',backTop:'Наверх',pageTitle:'cobraS0FT · Личное пространство',playMusic:'Включить музыку',pauseMusic:'Пауза',settingsLabel:'Настройки оформления и языка',mainNav:'Главная навигация',mobileNav:'Навигация для телефона',quickLinks:'Быстрые ссылки',sendEmail:'Написать письмо',openSource:'Открытый код',seekLabel:'Перемотка'},uk:{home:'Головна',about:'Про мене',projects:'Проєкти',contact:'Контакти',sideNote:'Маленький куточок інтернету.',topLabel:'ОСОБИСТИЙ ПРОСТІР / 001',preferences:'Налаштування',language:'Мова',appearance:'Оформлення',light:'Світла',dark:'Темна',helloLabel:'ЛАСКАВО ПРОШУ',heroTitle:'Привіт, я <em>cobraS0FT.</em>',heroText:'Створюю плагіни для exteraGram, експериментую з вебтехнологіями та перетворюю ідеї на корисні проєкти.',tag1:'Розробник',tag2:'Плагіни',tag3:'Warhammer 40K',explore:'Мої проєкти',moreAbout:'Про мене',channelDesc:'Мій Telegram-канал із плагінами та експериментами.',githubDesc:'Вихідний код і репозиторії',contactDesc:'Зв’яжімося',aboutHeading:'Трохи про мене',aboutCardTitle:'Від цікавості до проєктів.',aboutBody:'Я cobraS0FT. Люблю створювати корисні інструменти, досліджувати API, працювати над плагінами для exteraGram і вчитися нового. Окрім коду захоплююся Warhammer 40,000 — улюблений орден — Ультрамарини. Тут зібрані мої роботи та способи зв’язку зі мною.',focusTitle:'Мої напрями',focus1:'Telegram та exteraGram',focus2:'Вебексперименти',focus3:'Корисні інструменти',focus4:'Warhammer 40K — Ультрамарини',projectsHeading:'Над чим я працюю',projectsIntro:'Добірка проєктів та експериментів.',airDesc:'Сповіщення про повітряні тривоги в Україні з вибором області та району.',hubDesc:'Цей сайт: багатомовний особистий простір.',seeChannel:'Перейти до каналу',sourceCode:'Вихідний код',plugin1Title:'BotTags',plugin1Desc:'Додає тег до повідомлень у вибраних чатах. Налаштування командою .tag. Корисно в ботах підтримки.',plugin2Title:'AutoReplier By Excess',plugin2Desc:'Автовідповідь у приватні повідомлення, якщо власник не відповів за вказаний час.',plugin3Title:'NoDisturb',plugin3Desc:'Приховує профілі, повідомлення та онлайн-статус вибраних користувачів.',contactHeading:'Є ідеї?',contactIntro:'Запитання, пропозиції чи співпраця — пиши.',workEmail:'Робоча пошта',copy:'Копіювати',copied:'Скопійовано!',channel:'Канал',footer:'Створено з цікавістю.',backTop:'Нагору',pageTitle:'cobraS0FT · Особистий простір',playMusic:'Увімкнути музику',pauseMusic:'Пауза',settingsLabel:'Налаштування оформлення та мови',mainNav:'Головна навігація',mobileNav:'Навігація для телефону',quickLinks:'Швидкі посилання',sendEmail:'Написати листа',openSource:'Відкритий код',seekLabel:'Перемотка'}};
 const languageNames={en:'English',ru:'Русский',uk:'Українська'};
 const BLUE_HUE=245;
-const store=(k,v)=>{try{localStorage.setItem('cobra-'+k,v)}catch(e){}};
+const store=(k,v)=>{try{localStorage.setItem('cobra-'+k,v)}catch(e){} };
 const read=(k,d)=>{try{return localStorage.getItem('cobra-'+k)||d}catch(e){return d}};
-let lang=read('lang',navigator.language.toLowerCase().startsWith('uk')?'uk':navigator.language.toLowerCase().startsWith('ru')?'ru':'en');
+let lang=read('lang','en');
 if(!translations[lang])lang='en';
-let mode=read('mode','system');
-if(!['light','dark','system'].includes(mode))mode='system';
-const media=matchMedia('(prefers-color-scheme: dark)');
+let mode=read('mode','dark');
+if(!['light','dark'].includes(mode))mode='dark';
 function theme(){
-  let dark=mode==='dark'||mode==='system'&&media.matches;
+  let dark=mode==='dark';
   let h=BLUE_HUE;
   let vals=dark?{'bg':`hsl(${h} 13% 7%)`,'on':`hsl(${h} 15% 91%)`,'surface':`hsl(${h} 12% 12% / .6)`,'surface-high':`hsl(${h} 12% 18% / .72)`,'primary':`hsl(${h} 38% 76%)`,'on-primary':`hsl(${h} 44% 18%)`,'primary-container':`hsl(${h} 30% 28% / .75)`,'on-primary-container':`hsl(${h} 43% 90%)`,'secondary-container':`hsl(${h} 16% 26% / .7)`,'on-secondary-container':`hsl(${h} 25% 88%)`,'tertiary':`hsl(${(h+60)%360} 38% 77%)`,'on-tertiary':`hsl(${(h+60)%360} 35% 18%)`,'tertiary-container':`hsl(${(h+60)%360} 24% 28% / .75)`,'on-tertiary-container':`hsl(${(h+60)%360} 40% 90%)`,'muted':`hsl(${h} 9% 70%)`,'outline':`hsl(${h} 10% 27% / .8)`,'scrim':'rgba(6,8,12,.62)'}:{'bg':`hsl(${h} 24% 97%)`,'on':`hsl(${h} 21% 13%)`,'surface':`hsl(${h} 24% 93% / .64)`,'surface-high':`hsl(${h} 20% 89% / .76)`,'primary':`hsl(${h} 38% 34%)`,'on-primary':'#fff','primary-container':`hsl(${h} 43% 84% / .8)`,'on-primary-container':`hsl(${h} 44% 18%)`,'secondary-container':`hsl(${h} 22% 86% / .76)`,'on-secondary-container':`hsl(${h} 25% 22%)`,'tertiary':`hsl(${(h+60)%360} 34% 35%)`,'on-tertiary':'#fff','tertiary-container':`hsl(${(h+60)%360} 43% 87% / .8)`,'on-tertiary-container':`hsl(${(h+60)%360} 33% 20%)`,'muted':`hsl(${h} 9% 38%)`,'outline':`hsl(${h} 13% 80% / .8)`,'scrim':'rgba(255,255,255,.5)'};
   Object.entries(vals).forEach(([k,v])=>document.documentElement.style.setProperty('--'+k,v));
-  document.querySelector('meta[name="theme-color"]').content=dark?'#0d0f15':'#f3f5fb';
+  document.querySelector('meta[name="theme-color"]').content=dark?'#111116':'#f4f3fa';
+  document.documentElement.style.setProperty('--particle',dark?'rgba(255,255,255,.86)':'rgba(0,0,0,.72)');
   document.documentElement.style.colorScheme=dark?'dark':'light';
 }
 function updateDropdownDisplays(){
@@ -37,8 +37,10 @@ function translate(){
       else el.textContent=translations[lang][k];
     }
   });
+  document.querySelectorAll('[data-i-aria]').forEach(el=>el.setAttribute('aria-label',translations[lang][el.dataset.iAria]));
   updateDropdownDisplays();
-  document.title='cobraS0FT · Personal Hub';
+  updatePlayerLabel();
+  document.title=translations[lang].pageTitle;
 }
 function closeAllDropdowns(){
   document.querySelectorAll('.dropdown-menu').forEach(m=>{m.hidden=true});
@@ -105,30 +107,82 @@ function active(){
   });
 }
 addEventListener('scroll',active,{passive:true});
-media.addEventListener('change',()=>{if(mode==='system')theme()});
 document.getElementById('year').textContent=new Date().getFullYear();
 theme();
 translate();
 active();
 if(window.lucide)lucide.createIcons();
+function updatePlayerLabel(){
+  const a=document.getElementById('track-audio'),t=document.getElementById('player-toggle');
+  if(!a||!t)return;
+  t.setAttribute('aria-label',a.paused?translations[lang].playMusic:translations[lang].pauseMusic);
+}
 const audio=document.getElementById('track-audio'),playerToggle=document.getElementById('player-toggle'),playerBar=document.getElementById('player-bar'),playerProgress=document.getElementById('player-progress');
 if(audio&&playerToggle){
-  function setIcon(name){
-    playerToggle.innerHTML=`<i data-lucide="${name}"></i>`;
-    if(window.lucide)lucide.createIcons({nodes:[playerToggle.firstElementChild]});
-  }
-  playerToggle.addEventListener('click',()=>{
-    if(audio.paused){audio.play().catch(()=>{});}
-    else{audio.pause();}
-  });
-  audio.addEventListener('play',()=>{setIcon('pause');playerToggle.setAttribute('aria-label','Pause music')});
-  audio.addEventListener('pause',()=>{setIcon('play');playerToggle.setAttribute('aria-label','Play music')});
+  const setIcon=name=>{playerToggle.innerHTML=`<i data-lucide="${name}"></i>`;if(window.lucide)lucide.createIcons({nodes:[playerToggle.firstElementChild]})};
+  const seekTo=ratio=>{if(audio.duration)audio.currentTime=Math.min(Math.max(ratio,0),1)*audio.duration};
+  playerToggle.addEventListener('click',()=>{if(audio.paused)audio.play().catch(()=>{});else audio.pause()});
+  audio.addEventListener('play',()=>{setIcon('pause');updatePlayerLabel()});
+  audio.addEventListener('pause',()=>{setIcon('play');updatePlayerLabel()});
   audio.addEventListener('timeupdate',()=>{
-    if(audio.duration)playerProgress.style.width=(audio.currentTime/audio.duration*100)+'%';
+    if(!audio.duration)return;
+    const p=audio.currentTime/audio.duration*100;
+    playerProgress.style.width=p+'%';
+    playerBar.setAttribute('aria-valuenow',String(Math.round(p)));
   });
-  playerBar.addEventListener('click',e=>{
-    const rect=playerBar.getBoundingClientRect();
-    const ratio=(e.clientX-rect.left)/rect.width;
-    if(audio.duration)audio.currentTime=ratio*audio.duration;
+  playerBar.addEventListener('click',e=>{const r=playerBar.getBoundingClientRect();seekTo((e.clientX-r.left)/r.width)});
+  playerBar.addEventListener('keydown',e=>{
+    if(!audio.duration)return;
+    const cur=audio.currentTime/audio.duration;
+    if(e.key==='ArrowLeft'||e.key==='ArrowDown'){e.preventDefault();seekTo(cur-.05)}
+    else if(e.key==='ArrowRight'||e.key==='ArrowUp'){e.preventDefault();seekTo(cur+.05)}
   });
 }
+
+
+// Subtle falling particle field: tiny round dots, theme-aware and lightweight.
+(()=>{
+  const canvas=document.getElementById('snow-canvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d',{alpha:true});
+  if(!ctx)return;
+  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
+  let width=0,height=0,dpr=1,particles=[],raf=0,last=0;
+  const makeParticle=(randomY=true)=>({
+    x:Math.random()*width,
+    y:randomY?Math.random()*height:-Math.random()*height*.15,
+    r:.55+Math.random()*1.25,
+    speed:10+Math.random()*23,
+    drift:(Math.random()-.5)*7,
+    alpha:.28+Math.random()*.65,
+    phase:Math.random()*Math.PI*2,
+    sway:.25+Math.random()*.85
+  });
+  function resize(){
+    const rect=canvas.getBoundingClientRect();
+    width=Math.max(1,rect.width);height=Math.max(1,rect.height);
+    dpr=Math.min(window.devicePixelRatio||1,1.5);
+    canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    const count=Math.min(145,Math.max(45,Math.round(width*height/10500)));
+    particles=Array.from({length:count},()=>makeParticle());
+    restart();
+  }
+  function draw(now=0){
+    if(reduceMotion.matches){ctx.clearRect(0,0,width,height);particles.forEach(p=>{ctx.beginPath();ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--particle').trim()||'#fff';ctx.globalAlpha=p.alpha;ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;return}
+    const dt=Math.min((now-last)/1000||0,.04);last=now;
+    ctx.clearRect(0,0,width,height);
+    const color=getComputedStyle(document.documentElement).getPropertyValue('--particle').trim()||'#fff';
+    for(const p of particles){
+      p.y+=p.speed*dt;p.x+=(p.drift+Math.sin(now*.00045+p.phase)*p.sway*5)*dt;
+      if(p.y>height+4){Object.assign(p,makeParticle(false));p.y=-2}
+      if(p.x<-4)p.x=width+3;if(p.x>width+4)p.x=-3;
+      ctx.globalAlpha=p.alpha;ctx.fillStyle=color;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();
+    }
+    ctx.globalAlpha=1;raf=requestAnimationFrame(draw);
+  }
+  function restart(){cancelAnimationFrame(raf);last=0;if(reduceMotion.matches)draw();else raf=requestAnimationFrame(draw)}
+  addEventListener('resize',resize,{passive:true});
+  reduceMotion.addEventListener?.('change',restart);
+  resize();restart();
+})();
