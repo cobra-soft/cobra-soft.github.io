@@ -186,3 +186,36 @@ if(audio&&playerToggle){
   reduceMotion.addEventListener?.('change',restart);
   resize();restart();
 })();
+
+// ---- Motion & interaction (Material 3) ----
+document.documentElement.classList.add('js');
+const motionOK = matchMedia('(prefers-reduced-motion: no-preference)');
+// Reveal sections and cards as they enter the viewport
+const revealIO = new IntersectionObserver(entries => entries.forEach(en => {
+  if (en.isIntersecting) { en.target.classList.add('in'); revealIO.unobserve(en.target); }
+}), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('#about, #projects, #contact, .quick, .project-card').forEach(el => {
+  el.classList.add('reveal');
+  revealIO.observe(el);
+});
+// Material ripple on press
+const rippleTargets = '.btn,.icon-btn,.quick,.project-card,.copy-btn,.dropdown-trigger,.dropdown-option,.player-toggle,.contact-panel > a,.contact-row,.nav-link,.mobile-nav a';
+document.addEventListener('pointerdown', e => {
+  const t = e.target.closest(rippleTargets);
+  if (!t || !motionOK.matches) return;
+  const r = t.getBoundingClientRect();
+  const size = Math.max(r.width, r.height) * 2.2;
+  const s = document.createElement('span');
+  s.className = 'ripple';
+  s.style.width = s.style.height = size + 'px';
+  s.style.left = (e.clientX - r.left - size / 2) + 'px';
+  s.style.top = (e.clientY - r.top - size / 2) + 'px';
+  t.appendChild(s);
+  setTimeout(() => s.remove(), 650);
+});
+// Player: equalizer and morphing art run only while playing
+const playerEl = document.getElementById('player'), trackEl = document.getElementById('track-audio');
+if (playerEl && trackEl) {
+  trackEl.addEventListener('play', () => playerEl.classList.add('is-playing'));
+  trackEl.addEventListener('pause', () => playerEl.classList.remove('is-playing'));
+}
