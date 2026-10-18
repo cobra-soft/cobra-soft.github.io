@@ -111,12 +111,6 @@ theme();
 translate();
 active();
 if(window.lucide)lucide.createIcons();
-const bgVideo=document.getElementById('bg-video');
-if(bgVideo){
-  const reveal=()=>bgVideo.classList.add('is-ready');
-  if(bgVideo.readyState>=3)reveal();
-  else bgVideo.addEventListener('canplay',reveal,{once:true});
-}
 const audio=document.getElementById('track-audio'),playerToggle=document.getElementById('player-toggle'),playerBar=document.getElementById('player-bar'),playerProgress=document.getElementById('player-progress');
 if(audio&&playerToggle){
   function setIcon(name){
