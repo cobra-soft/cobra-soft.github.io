@@ -1,4 +1,4 @@
-/* build: 2026-10-18T20:40Z v14 */
+/* build: 2026-10-18T21:10Z v15 */
 @font-face{font-family:'Balsamiq Sans';font-style:normal;font-weight:400;font-display:swap;src:url(assets/BalsamiqSans-Regular.ttf) format('truetype')}
 @font-face{font-family:'Balsamiq Sans';font-style:normal;font-weight:700;font-display:swap;src:url(assets/BalsamiqSans-Bold.ttf) format('truetype')}
 @font-face{font-family:'Balsamiq Sans';font-style:italic;font-weight:400;font-display:swap;src:url(assets/BalsamiqSans-Italic.ttf) format('truetype')}
@@ -268,12 +268,14 @@ footer a::after{content:'';position:absolute;left:0;bottom:-3px;width:100%;heigh
 .float-nav .nav-link:focus-visible .nav-hit{outline:3px solid var(--primary);outline-offset:2px}
 .float-nav .nav-link:focus-visible .nav-label{opacity:1;transform:translateY(-50%) translateX(0)}
 @media(max-width:720px){
-  .float-nav{left:50%;top:auto;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);flex-direction:row;gap:2px;padding:8px;border-radius:30px;width:max-content;max-width:calc(100vw - 24px);background:color-mix(in srgb, var(--surface-high) 68%, transparent)}
+  .float-nav{left:50%;top:auto;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);flex-direction:row;gap:4px;padding:9px;border-radius:28px;width:max-content;max-width:calc(100vw - 24px);background:color-mix(in srgb, var(--surface-high) 68%, transparent)}
   .float-nav-brand{display:none}
-  .float-nav-links{flex-direction:row;gap:2px}
-  .float-nav .nav-link{flex-direction:column;width:60px;height:56px;border-radius:18px;gap:3px}
-  .float-nav .nav-hit{width:52px;height:30px;border-radius:50px}
-  .float-nav .nav-link .nav-label{position:static;transform:none;opacity:1;pointer-events:none;background:none;border:0;box-shadow:none;padding:0;font-size:10px;font-weight:700;color:inherit}
+  .float-nav-links{flex-direction:row;gap:4px}
+  .float-nav .nav-link .nav-label{left:50%;right:auto;top:auto;bottom:calc(100% + 10px);transform:translateX(-50%) translateY(6px)}
+  .float-nav .nav-link:focus-visible .nav-label{transform:translateX(-50%) translateY(0)}
+}
+@media(max-width:720px) and (hover:hover){
+  .float-nav .nav-link:hover .nav-label{transform:translateX(-50%) translateY(0)}
 }
 
 
