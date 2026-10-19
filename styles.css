@@ -96,10 +96,7 @@ h1 em{font-style:normal;color:var(--primary)}
 /* Player (M3 tonal card) */
 .player{flex:1 1 280px;min-width:0;max-width:460px;display:flex;align-items:center;gap:14px;padding:10px;border-radius:var(--r-xl);background:var(--primary-container);color:var(--on-primary-container);box-shadow:var(--elev-1);transition:background .3s,color .3s}
 .player-art{position:relative;width:56px;height:56px;border-radius:var(--r-lg);background:var(--primary);color:var(--on-primary);display:grid;place-items:center;flex-shrink:0;overflow:hidden}
-.player-art svg{width:26px;height:26px;stroke-width:2}
-.player-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .4s var(--ease-std),transform .4s var(--ease-std)}
-.is-playing .player-cover{opacity:1;transform:scale(1)}
-.is-playing .player-art svg{display:none}
+.player-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .player-meta{flex:1;min-width:0;display:grid;gap:9px}
 .player-title strong{display:block;font-family:'Balsamiq Sans',sans-serif;font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .player-title small{display:block;font-size:12px;opacity:.8;margin-top:1px}
