@@ -188,6 +188,43 @@ if(audio&&playerToggle){
   resize();restart();
 })();
 
+// Banner video: loaded and played lazily, only when it actually matters.
+// - Never fetched for prefers-reduced-motion or save-data/slow connections (poster stays as a plain image).
+// - The .mp4 itself isn't requested until the banner first scrolls into view.
+// - Paused whenever it's off-screen or the tab is backgrounded, so nothing keeps decoding for nothing.
+(()=>{
+  const video=document.querySelector('.hero-banner-img');
+  const src=video&&video.dataset.src;
+  if(!video||!src)return;
+  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
+  const conn=navigator.connection||navigator.webkitConnection||navigator.mozConnection;
+  const slowConn=conn&&(conn.saveData||/2g/.test(conn.effectiveType||''));
+  if(reduceMotion.matches||slowConn)return;
+
+  let loaded=false,inView=false;
+  function load(){
+    if(loaded)return;
+    loaded=true;
+    const source=document.createElement('source');
+    source.src=src;source.type='video/mp4';
+    video.appendChild(source);
+    video.load();
+  }
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      inView=en.isIntersecting;
+      if(inView){load();if(!document.hidden)video.play().catch(()=>{})}
+      else video.pause();
+    });
+  },{threshold:.15});
+  io.observe(video);
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden)video.pause();
+    else if(inView)video.play().catch(()=>{});
+  });
+  reduceMotion.addEventListener?.('change',e=>{if(e.matches)video.pause()});
+})();
+
 // ---- Motion & interaction (Material 3) ----
 document.documentElement.classList.add('js');
 const motionOK = matchMedia('(prefers-reduced-motion: no-preference)');

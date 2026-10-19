@@ -55,10 +55,15 @@ main{min-width:0;padding:22px clamp(20px,4vw,66px) 35px clamp(104px,10vw,150px)}
 .dropdown-option.selected{background:var(--primary-container);color:var(--on-primary-container)}
 
 /* Hero */
-.hero{margin-top:15px;min-height:420px;border-radius:36px;padding:clamp(27px,4vw,55px);display:grid;grid-template-columns:1.25fr .75fr;gap:22px;overflow:hidden;position:relative}
+.hero{--hero-pad:clamp(27px,4vw,55px);margin-top:15px;min-height:420px;border-radius:36px;padding:var(--hero-pad);display:grid;grid-template-columns:1.25fr .75fr;gap:22px;overflow:hidden;position:relative}
 .hero-copy{align-self:center;z-index:1}
+
+/* Banner strip above the hero, avatar overlapping its bottom-left edge */
+.hero-banner{position:relative;grid-column:1/-1;height:200px;margin:calc(-1*var(--hero-pad)) calc(-1*var(--hero-pad)) 50px;border-radius:36px 36px 0 0;overflow:visible;background:var(--secondary-container)}
+.hero-banner-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;border-radius:36px 36px 0 0}
+.hero-banner::before{content:'';position:absolute;inset:0;border-radius:36px 36px 0 0;background:linear-gradient(180deg,color-mix(in srgb, var(--bg) 8%, transparent) 0%,color-mix(in srgb, var(--bg) 50%, transparent) 55%,var(--bg) 100%)}
 .hero-top{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:6px}
-.hero-avatar{width:104px;height:104px;border-radius:50%;object-fit:cover;display:block;flex-shrink:0;border:3px solid var(--primary);box-shadow:0 0 0 6px var(--primary-container);transition:transform .5s var(--ease-spring)}
+.hero-avatar{position:absolute;left:var(--hero-pad);bottom:-50px;width:104px;height:104px;border-radius:50%;object-fit:cover;display:block;flex-shrink:0;border:4px solid var(--bg);box-shadow:0 0 0 4px var(--primary),var(--elev-3);transition:transform .5s var(--ease-spring);z-index:2}
 .overline{display:flex;align-items:center;gap:9px}
 .live-dot{height:8px;width:8px;border-radius:50%;background:var(--primary)}
 h1{font-size:clamp(40px,4.8vw,76px);line-height:1.09;margin:23px 0}
@@ -219,8 +224,10 @@ footer a::after{content:'';position:absolute;left:0;bottom:-3px;width:100%;heigh
   main{padding:10px 16px calc(92px + env(safe-area-inset-bottom)) 16px}
   .topbar{height:60px}
   .topbar>.eyebrow{display:none}
-  .hero{margin-top:10px;grid-template-columns:1fr;padding:28px;min-height:0;border-radius:29px}
-  .hero-avatar{width:84px;height:84px}
+  .hero{--hero-pad:28px;margin-top:10px;grid-template-columns:1fr;padding:28px;min-height:0;border-radius:29px}
+  .hero-banner{height:140px;margin-bottom:40px;border-radius:29px 29px 0 0}
+  .hero-banner-img,.hero-banner::before{border-radius:29px 29px 0 0}
+  .hero-avatar{width:84px;height:84px;bottom:-40px}
   .hero-art{min-height:180px}
   .art-window{max-width:260px;transform:rotate(3deg)}
   .art-body{padding:18px}
