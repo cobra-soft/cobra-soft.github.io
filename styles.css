@@ -28,7 +28,9 @@ main{min-width:0;padding:22px clamp(20px,4vw,66px) 35px clamp(104px,10vw,150px)}
 
 /* Navigation rail */
 .brand{display:flex;align-items:center;gap:12px;font-family:'Balsamiq Sans',sans-serif;font-size:21px;font-weight:700;letter-spacing:-1px}
-.brand-icon{width:39px;height:39px;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;border-radius:var(--r-md);font-size:17px;transition:transform .45s var(--ease-spring),border-radius .45s var(--ease-std)}
+.brand-icon{width:39px;height:39px;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;border-radius:var(--r-md);font-size:17px;cursor:pointer;transition:transform .45s var(--ease-spring),border-radius .45s var(--ease-std)}
+.brand-icon.round{border-radius:50%}
+.brand-icon:active{transform:scale(.9)}
 .brand-dot{color:var(--primary)}
 .symbol{font-size:22px;width:25px;display:grid;place-items:center;transition:transform .35s var(--ease-spring)}
 

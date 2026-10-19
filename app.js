@@ -251,6 +251,22 @@ document.addEventListener('pointerdown', e => {
   t.appendChild(s);
   setTimeout(() => s.remove(), 650);
 });
+// Easter egg: tapping the <> logo next to "cobraS0FT" rounds it off and reveals a hidden project
+(() => {
+  const brandIcon = document.querySelector('.page-brand .brand-icon');
+  const grid = document.querySelector('.projects-grid');
+  if (!brandIcon || !grid) return;
+  let revealed = false;
+  brandIcon.addEventListener('click', () => {
+    brandIcon.classList.add('round');
+    if (revealed) return;
+    revealed = true;
+    const card = document.createElement('article');
+    card.className = 'project-card surface reveal in';
+    card.innerHTML = '<div class="project-top"><span class="project-symbol has-icon"><img src="assets/icon-bulba.png" alt="" loading="lazy"></span></div><h3>Бульба</h3><p>Бульба</p>';
+    grid.appendChild(card);
+  });
+})();
 // Player: equalizer and morphing art run only while playing
 const playerEl = document.getElementById('player'), trackEl = document.getElementById('track-audio');
 if (playerEl && trackEl) {
