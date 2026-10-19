@@ -200,7 +200,7 @@ document.querySelectorAll('#about, #projects, #contact, .quick, .project-card').
   revealIO.observe(el);
 });
 // Material ripple on press
-const rippleTargets = '.btn,.icon-btn,.quick,.project-card,.copy-btn,.dropdown-trigger,.dropdown-option,.player-toggle,.contact-panel > a,.contact-row,.nav-link,.mobile-nav a';
+const rippleTargets = '.btn,.icon-btn,.quick,.project-card,.copy-btn,.dropdown-trigger,.dropdown-option,.player-toggle,.contact-panel > a,.contact-row,.float-nav .nav-hit,.float-nav-brand';
 document.addEventListener('pointerdown', e => {
   const t = e.target.closest(rippleTargets);
   if (!t || !motionOK.matches) return;
